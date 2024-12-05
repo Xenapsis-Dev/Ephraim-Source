@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ephraim</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image.png" href="/imgs/Ephraim.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/saved.js"></script>
+    <script src="js/custombookmarks.js"></script>
+    <script src="js/loadbookmarks.js"></script>
+</head>
+
+<body>
+  <div style="position: fixed; z-index: -1;" id="particles-js">
+
+  </div>
+  <div class="flex justify-center items-center flex-col" style="width: 100%; height: 100%;">
+    <div class="proxywrapper  flex items-center justify-center flex-col">
+        <h1 class="titlee text-6xl mb-3">Ephraim Proxy...</h1>
+    </div>
+    <script>
+      function loadpage(e) {
+        let id = document.getElementById(e)
+        let url = e.value
+        let encodedurl = __uv$config.encodeUrl(url)
+        let string = "/uv/service/"
+        let finalurl = string + encodedurl
+        document.location.href = finalurl
+      }
+    </script>
+    <div class="autobooks flex justify-center items-center gap-10 flex-wrap">
+      <div><button onclick="custombookmark()"><div class="autobookdiv" style="filter: none;"><img class="autobookimg" style="box-shadow: none;" src="imgs/addbookmark.png"></div></button></div>
+      <div><button value="https://xenapsis.dev" id="xenapsis" onclick="loadpage(xenapsis)"><div class="autobookdiv"><img class="autobookimg" src="imgs/favicon.png" ></div></button></div>
+      <div><button value="https://kipflix.xyz" id="fmovies" onclick="loadpage(fmovies)"><div class="autobookdiv"><img class="autobookimg" src="imgs/kipflix.png" ></div></button></div>
+      <div><button value="https://now.gg/apps/a/19900/b.html" id="roblox" onclick="loadpage(roblox)"><div class="autobookdiv"><img class="autobookimg" src="imgs/roblox.png" ></div></button></div>
+      <div class="geforcenow"><button value="https://play.geforcenow.com/mall/#/loginwall" id="geforcenow" onclick="loadpage(geforcenow)"><div class="autobookdiv"><img class="autobookimg" src="imgs/geforcenow.png"></div></button></div>
+    </div>
+  </div>
+    <script src="particlejs/particles.js"></script>
+    <script src="particlejs/app.js"></script>
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.config.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ephraim</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image.png" href="imgs/Ephraim.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tabs.js"></script>
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="uv/register-sw.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
+    <script src="js/startup.js"></script>
+    <script src="js/ephraimcommands.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9LFFDHW98"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T9LFFDHW98');
+    </script>
+</head>
+
+<body>
+    
+    <div style="position: relative;; z-index: 3; bottom: 0px;" class="">
+        <div class="flex" style="background-color: #1d1d1d">
+            <div id="buttons" class="buttons flex flex-nowrap flex-row gap-2 overflow-x-overlay overflow-y-hidden">
+                <div class="tabholderr" id="tabholderr">
+                    <button id="nottab1" onclick="tab1()" class="tabb">Ephraim</button>
+                </div>
+                <button onclick="createtab()" class="plus" id="plus">+</button>
+            </div>
+            <div class="flex items-center justify-center time">
+                <h1 id="time"></h1>
+            </div>
+            <div class="stuff flex justify-end items-center" style="width: 40%;">
+                <button class="back  mr-3 fullscreenicon" onclick="popout()"><img src="imgs/popout.png"></button>
+                <button class="back  mr-3 fullscreenicon" onclick="erudaa()"><img src="imgs/console.png"></button>
+                <button class="back  mr-3 fullscreenicon" onclick="fullscreen()"><img src="imgs/fullscreen.png"></button>
+            </div>
+        </div>
+        <div class="flex justify-evenly items-center flex-nowrap flex-row pb-3 pt-3" style="background-color: #161616">
+            <div class="controls flex flex-nowrap gap-3 ml-3 mr-3">
+                <button class="back" onclick="back()"><img src="imgs/back.png"></button>
+                <button class="back settingsicon" onclick="refresh()"><img src="imgs/refresh.png"></button>
+                <button class="back" onclick="forward()"><img src="imgs/forward.png"></button>
+            </div>
+            <div class="searchstuff">
+                <form class="uv-form" id="uv-form" method="post">
+                    <input id="uv-search-engine" value="https://google.com/search?q=" type="hidden">
+                    <input class="search-input text-center"  id="uv-address" method="post" placeholder="Search the web freely..." name="search" type="text">
+                </form>
+            </div>
+            <div>
+                <button class="back mr-3 ml-3 mt-1.5 settingsicon"onclick="settings()"><img src="imgs/settings.png"></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex justify-center items-center relative" style="height: 88%; width: 100%;">
+        <div id="iframecontainer" class="iframecontainer flex justify-center items-center" style="width: 100%; height: 100%;">
+            <iframe src="proxy.html" id="iframe-1"class="rounded-xl proxyframee" style="width: 100%; height: 100%;"></iframe>
+        </div>
+    </div>
+    </iframe>
+    
+</body>
+</html>
